@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ProductList from './list';
 import Modal from './modal';
 
-function ShoesStore({ products }) {
+function Shoes({ products }) {
   const [productDetail, setProductDetail] = useState(null);
 
   const setStateModal = (product) => {
@@ -11,11 +11,11 @@ function ShoesStore({ products }) {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center">Shoes Store</h2>
+      <h2 className="text-center">store</h2>
       <ProductList productsData={products} setStateModal={setStateModal} />
-      {productDetail && <Modal content={productDetail} />}
+      {productDetail && <Modal content={productDetail} close={()=>setProductDetail(null)}/>}
     </div>
   );
 }
 
-export default ShoesStore;
+export default Shoes;

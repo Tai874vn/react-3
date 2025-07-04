@@ -1,5 +1,5 @@
 import React from 'react';
-import ShoesStore from './components/shoes.jsx';
+import Shoes from './components/shoes.jsx';
 
 
 const products = 
@@ -127,7 +127,7 @@ const products =
   ]
 
 function App() {
-  return <ShoesStore products={products} />;
+  return <Shoes products={products} />;
 }
 
 export default App;
